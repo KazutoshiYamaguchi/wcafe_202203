@@ -91,13 +91,6 @@ th {
   margin: auto;
 }
 
-.logo {
-  width: 200px;
-  height: 65px;
-  text-indent: -9999px;
-  background: url("../images/logo.png") 0 0 / cover no-repeat;
-}
-
 .gl-header {
   height: 140px;
   padding-top: 15px;
@@ -106,6 +99,43 @@ th {
       rgba(27, 18, 18, .7) 70%,
       rgba(27, 18, 18, .8) 100%),
     url("../images/wood.jpg") 0 0 / contain repeat-x;
+}
+
+.logo {
+  width: 200px;
+  height: 65px;
+  margin-bottom: 15px;
+  background: url("../images/logo.png") 0 0 / cover no-repeat;
+}
+
+.logo a {
+  display: block;
+  width: 200px;
+  height: 65px;
+  text-indent: -9999px;
+}
+
+.gl-nav ul {
+  display: table;
+  list-style-type: none;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.gl-nav li {
+  display: table-cell;
+  text-align: center;
+  border-right: 2px solid #000;
+}
+
+.gl-nav li a {
+  display: block;
+  color: #ccc;
+  text-shadow: 0 0 5px #000;
+}
+
+.gl-nav li a:hover {
+  color: #a86;
 }
 
 .gl-footer {
