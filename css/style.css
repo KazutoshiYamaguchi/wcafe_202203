@@ -86,18 +86,21 @@ th {
   グローバル
 -------------------------*/
 
+.container {
+  max-width: 980px;
+  margin: auto;
+}
+
 .logo {
   width: 200px;
   height: 65px;
-  margin-top: 50px;
   text-indent: -9999px;
   background: url("../images/logo.png") 0 0 / cover no-repeat;
 }
 
 .gl-header {
   height: 140px;
-  /* padding-top: 15px; */
-  border-top: 1px solid red;
+  padding-top: 15px;
   background: linear-gradient(110deg,
       #000 0%,
       rgba(27, 18, 18, .7) 70%,
