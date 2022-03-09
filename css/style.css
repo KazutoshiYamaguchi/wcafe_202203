@@ -31,6 +31,10 @@ a:visited {
   color: #333;
 }
 
+:hover {
+  transition: .4s ease-in;
+}
+
 a:hover,
 a:active {
   color: #933;
@@ -154,6 +158,41 @@ th {
   clear: both;
 }
 
+.jBounceIn {
+  transition: .6s cubic-bezier(.47, 2.02, .31, -0.36);
+}
+
+.jBounceIn:hover,
+.jbounceIn:focus,
+.jbounceIn:active {
+  transform: scale(1.1);
+}
+
+.jBounceUp {
+  transition: margin .3s ease-out;
+}
+
+.jBounceUp:hover {
+  animation: jBounceUp-frames 1s;
+}
+
+@keyframes jBounceUp-frames {
+  0%,
+  20%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+  }
+}
+
 /*-------------------------
   トップ
 -------------------------*/
@@ -179,7 +218,7 @@ th {
   letter-spacing: 2.4em;
   letter-spacing: .3em;
   text-shadow: 0 0 5px #422,
-               0 0 10px #000;
+    0 0 10px #000;
   background: url("../images/logo2.png") 0 -100px / 90% no-repeat;
   filter: drop-shadow(0 0 5px #422);
 }
@@ -306,15 +345,19 @@ th {
 .menu:nth-of-type(1)::after {
   background-image: url("../images/m_morning.jpg");
 }
+
 .menu:nth-of-type(2)::after {
   background-image: url("../images/m_lunch.jpg");
 }
+
 .menu:nth-of-type(3)::after {
   background-image: url("../images/m_dessert.jpg");
 }
+
 .menu:nth-of-type(4)::after {
   background-image: url("../images/m_other.jpg");
 }
+
 .menu:nth-of-type(5)::after {
   background-image: url("../images/m_drink.jpg");
 }
@@ -323,13 +366,13 @@ th {
   margin-bottom: 15px;
 }
 
-.menus > ul {
+.menus>ul {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2px;
 }
 
-.menus > ul li a {
+.menus>ul li a {
   padding: 10px;
   border-top: 1px solid #ccc;
   border-left: 1px solid #ccc;
