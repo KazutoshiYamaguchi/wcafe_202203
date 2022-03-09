@@ -170,9 +170,9 @@ th {
   float: left;
 }
 
-.top-side {
-  width: 300px;
-  float: right;
+.top-order {
+  display: flex;
+  flex-direction: column;
 }
 
 .top-time,
@@ -187,10 +187,12 @@ th {
 
 .top-time {
   background: url("../images/time.jpg") -290px 0 no-repeat;
+  order: 2;
 }
 
 .top-rank {
   background: url("../images/rank.jpg") -290px 0 no-repeat;
+  order: 1;
 }
 
 .top-time li,
@@ -208,6 +210,20 @@ th {
   letter-spacing: 0;
 }
 
+.top-news dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.top-news dt {
+  width: 18%;
+}
+
+.top-news dd {
+  width: 82%;
+  border-bottom: 2px dotted #ccc;
+}
+
 .top-news dd:first-of-type::after {
   content: 'NEW!';
   background-color: #990000;
@@ -217,6 +233,11 @@ th {
   color: #fff;
   text-align: center;
   padding: 3px;
+}
+
+.top-side {
+  width: 300px;
+  float: right;
 }
 
 .top-side a:hover {
@@ -239,6 +260,20 @@ th {
 /*-------------------------
   メニュー
 -------------------------*/
+
+.menus > ul {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.menus > ul li a {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-radius: 3px 3px 0 0;
+}
 
 .menu h3::first-line {
   font-size: 2.4rem;
