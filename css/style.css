@@ -15,6 +15,7 @@ body {
   font-size: 1.6rem;
   line-height: 2;
   font-feature-settings: "palt";
+  text-size-adjust: 100%;
 }
 
 a {
@@ -65,6 +66,18 @@ td {
   border: 1px solid #ccc;
 }
 
+th {
+  vertical-align: top;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  th,
+  td {
+    padding: 10px;
+  }
+}
+
 input[type="text"],
 input[type="email"],
 input[type="submit"],
@@ -76,15 +89,23 @@ select {
   border-radius: 3px;
 }
 
+@media screen and (max-width: 768px) {
+
+  input[type="text"],
+  input[type="email"],
+  input[type="submit"],
+  textarea,
+  select {
+    width: 100%;
+  }
+}
+
 input[type="radio"],
 input[type="checkbox"] {
   margin: 0 10px 0 30px;
 }
 
-th {
-  vertical-align: top;
-  text-align: left;
-}
+
 
 /*-------------------------
   グローバル
@@ -93,6 +114,12 @@ th {
 .container {
   max-width: 980px;
   margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 94%;
+  }
 }
 
 .gl-header {
@@ -105,11 +132,25 @@ th {
     url("../images/wood.jpg") 0 0 / contain repeat-x;
 }
 
+@media screen and (max-width: 768px) {
+  .gl-header {
+    height: auto;
+    margin-bottom: -10px;
+    background-size: cover;
+  }
+}
+
 .logo {
   width: 200px;
   height: 65px;
   margin-bottom: 15px;
   background: url("../images/logo.png") 0 0 / cover no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    margin: auto;
+  }
 }
 
 .logo a {
@@ -132,6 +173,18 @@ th {
   border-right: 2px solid #000;
 }
 
+@media screen and (max-width: 768px) {
+  .gl-nav ul {
+    display: block;
+  }
+
+  .gl-nav li {
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
 .gl-nav li a {
   display: block;
   color: #ccc;
@@ -150,6 +203,13 @@ th {
   color: #ccc;
   letter-spacing: .3em;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .gl-footer {
+    line-height: 1.5;
+    height: 40vw;
+  } 
 }
 
 .clearfix::after {
@@ -177,6 +237,7 @@ th {
 }
 
 @keyframes jBounceUp-frames {
+
   0%,
   20%,
   60%,
@@ -204,6 +265,13 @@ th {
   box-shadow: inset 0 2px 5px #000;
 }
 
+@media screen and (max-width: 768px) {
+  .top-welcome {
+    height: 1280px;
+    background-image: url("../images/main_sp.jpg");
+  }
+}
+
 .top-parent {
   position: relative;
 }
@@ -227,9 +295,31 @@ th {
   font-size: 4.8rem;
 }
 
+@media screen and (max-width: 768px) {
+  .top-catch {
+    left: 0;
+    padding: 80vw 0;
+    height: 1280px;
+    line-height: 2;
+    text-align: justify;
+    background-position: center top;
+    background-size: contain;
+  }
+
+  .top-catch br {
+    display: none;
+  }
+}
+
 .top-main {
   width: 660px;
   float: left;
+}
+
+@media screen and (max-width: 768px) {
+  .top-main {
+    width: 100%;
+  }
 }
 
 .top-order {
@@ -272,6 +362,16 @@ th {
   letter-spacing: 0;
 }
 
+@media screen and (max-width: 768px) {
+
+  .top-time,
+  .top-rank {
+    height: 680px;
+    padding: 400px 20px 20px;
+    background-position: center top;
+  }
+}
+
 .top-news dl {
   display: flex;
   flex-wrap: wrap;
@@ -297,6 +397,20 @@ th {
   padding: 3px;
 }
 
+@media screen and (max-width: 768px) {
+  .top-news {
+    margin-bottom: 30px;
+  }
+
+  .top-news dt {
+    width: 30%;
+  }
+
+  .top-news dd {
+    width: 70%;
+  }
+}
+
 .top-side {
   width: 300px;
   float: right;
@@ -304,6 +418,13 @@ th {
 
 .top-side a:hover {
   opacity: .7;
+}
+
+@media screen and (max-width: 768px) {
+  .top-side {
+    margin: auto;
+    float: none;
+  }
 }
 
 /*-------------------------
@@ -323,7 +444,33 @@ th {
   メニュー
 -------------------------*/
 
+.menus>ul {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.menus>ul li a {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-radius: 3px 3px 0 0;
+}
+
+@media screen and (max-width: 768px) {
+  .menus>ul, 
+  .menus>ul li a {
+    display: block;
+  }
+}
+
 .menu {
+  padding: 20px 30px;
+  margin-bottom: 100px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #ccc;
   position: relative;
 }
 
@@ -364,36 +511,22 @@ th {
 
 .menu li {
   margin-bottom: 15px;
-}
-
-.menus>ul {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 2px;
-}
-
-.menus>ul li a {
-  padding: 10px;
-  border-top: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  border-radius: 3px 3px 0 0;
+  border-bottom: 1px dotted #ccc;
 }
 
 .menu h3::first-line {
   font-size: 2.4rem;
 }
 
-.menu {
-  padding: 20px 30px;
-  margin-bottom: 100px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  box-shadow: 0 0 3px #ccc;
-}
-
-.menu li {
-  border-bottom: 1px dotted #ccc;
+@media screen and (max-width: 768px) {
+  .menu {
+    margin-bottom: 50vw;
+  }
+  .menu::after {
+    width: 90%;
+    height: 45vw;
+    top: 95%;
+  }
 }
 
 /*-------------------------
